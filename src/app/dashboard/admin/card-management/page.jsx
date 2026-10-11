@@ -2,6 +2,7 @@ import { Plus, AlertCircle } from 'lucide-react';
 import { getAdminCards } from '@/lib/api/cards';
 import CardModalWrapper from '@/components/dashboard/admin/cards/CardModalWrapper';
 
+export const dynamic = 'force-dynamic';
 
 export default async function AdminCardsPage() {
     const res = await getAdminCards();

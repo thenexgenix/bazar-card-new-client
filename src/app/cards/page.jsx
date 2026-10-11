@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { getAdminCards } from '@/lib/api/cards';
 import { Users, Layers, Sparkles, PackageCheck } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export default async function PublicCardsPage() {
     const response = await getAdminCards();
     const cards = response?.success ? response.data : [];

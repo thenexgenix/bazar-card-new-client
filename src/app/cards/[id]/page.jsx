@@ -5,6 +5,8 @@ import { ChevronRight } from 'lucide-react';
 import CardDetailsTabs from './components/CardDetailsTabs';
 import CardActionBox from './components/CardActionBox'; 
 
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
     const response = await getAdminCards();
     const cards = response?.success ? response.data : [];
