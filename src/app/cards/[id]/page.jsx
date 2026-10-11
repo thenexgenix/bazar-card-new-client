@@ -26,6 +26,7 @@ export default async function CardDetailPage({ params }) {
         notFound();
     }
 
+    
     const monthPlan = card.plans?.find(p => p.durationDays === 30) || card.plans?.[0];
     const perPersonDay = card.perPersonAmount > 0 ? card.perPersonAmount : (monthPlan && card.familySize ? (monthPlan.price / (card.familySize * monthPlan.durationDays)).toFixed(1) : 0);
 
